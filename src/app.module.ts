@@ -1,13 +1,16 @@
 import { Module } from '@nestjs/common';
+import { GraphQLModule } from '@nestjs/graphql';
+
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserController } from './controllers/user/user.controller';
-import { ArticleController } from './controllers/article/article.controller';
-import { CategoryController } from './controllers/category/category.controller';
+
+import { UsersModule } from './user/users.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController, UserController, CategoryController, ArticleController],
+  imports: [UsersModule],
+  controllers: [],
   providers: [AppService],
 })
 export class AppModule { }
