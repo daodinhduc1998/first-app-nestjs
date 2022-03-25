@@ -1,0 +1,16 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  _id: String!
+
+  """username login"""
+  username: String! @deprecated(reason: "Not useful in v2 schema")
+  email: String
+  avatar: String
+}
+
+type Query {
+  users: [User!]!
+}
