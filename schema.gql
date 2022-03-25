@@ -1,0 +1,44 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  username: String!
+  password: String!
+  email: String!
+  avatar: String
+}
+
+type Query {
+  getUsers: [User!]!
+  clearUsers: String!
+}
+
+type Mutation {
+  findUser(input: FindUserDTO!): User!
+  createUser(input: CreateUserDTO!): User!
+  deleteUser(input: DeleteUserDTO!): User!
+  updateUser(input: UpdateUserDTO!): User!
+}
+
+input FindUserDTO {
+  username: String!
+}
+
+input CreateUserDTO {
+  username: String!
+  password: String!
+  email: String!
+  avatar: String
+}
+
+input DeleteUserDTO {
+  username: String!
+}
+
+input UpdateUserDTO {
+  username: String!
+  password: String
+  email: String
+  avatar: String
+}

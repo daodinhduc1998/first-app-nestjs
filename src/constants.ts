@@ -1,2 +1,1 @@
-export const MONO_DB_CONNECTION_STRING =
-    process.env.MONO_DB_CONNECTION_STRING || 'mongodb://localhost:27017/nest-demo';
+export const MONGO_DB_CONNECTION_STRING = process.env.MONGO_DB_CONNECTION_STRING || 'mongodb://localhost:27017/nest-demo';
