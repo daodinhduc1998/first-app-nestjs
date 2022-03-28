@@ -14,10 +14,10 @@ export class User extends Document {
     @Field()
     username: string;
 
-    @Field()
+    @Field({ nullable: true })
     password: string;
 
-    @Field()
+    @Field({ nullable: true })
     email: string;
 
     @Field({ nullable: true })

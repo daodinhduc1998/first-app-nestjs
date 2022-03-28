@@ -4,14 +4,14 @@
 
 type User {
   username: String!
-  password: String!
-  email: String!
+  password: String
+  email: String
   avatar: String
 }
 
 type Query {
   getUsers: [User!]!
-  clearUsers: String!
+  clearUsers: [User!]!
 }
 
 type Mutation {

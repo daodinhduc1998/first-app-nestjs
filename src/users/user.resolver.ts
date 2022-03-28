@@ -15,6 +15,12 @@ export class UserResolver {
         return this.userService.getUsers();
     }
 
+    @Query(() => [User])
+    async clearUsers() {
+        //console.log(input);
+        return this.userService.clearUser();
+    }
+
     @Mutation(() => User)
     async findUser(@Args('input') input: FindUserDTO) {
         //console.log(input);
@@ -39,10 +45,6 @@ export class UserResolver {
         return this.userService.updateUser(input);
     }
 
-    @Query(() => String)
-    async clearUsers() {
-        //console.log(input);
-        return this.userService.clearUser();
-    }
+
 
 }

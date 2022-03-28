@@ -33,12 +33,11 @@ export class UsersService {
     }
 
     async deleteUser(deleteUserDTO: DeleteUserDTO) {
-        var status: object = {}
-        return await this.userModel.deleteOne(deleteUserDTO).exec()
+        return await this.userModel.findOneAndRemove(deleteUserDTO)
     }
 
     async clearUser() {
-        var result = await this.userModel.remove({}).exec()
-    }
+        return await this.userModel.deleteMany({}).then(result => result.deletedCount)
 
+    }
 }
